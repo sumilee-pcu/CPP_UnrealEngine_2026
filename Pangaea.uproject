@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "5.7",
+	"Category": "Games",
+	"Description": "UE 5.7.x practice project adapted from Unreal Engine 5 Game Development with C++ Scripting.",
+	"Modules": [
+		{
+			"Name": "Pangaea",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
