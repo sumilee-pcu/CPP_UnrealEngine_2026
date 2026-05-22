@@ -59,7 +59,7 @@ int ADefenseTower::GetHealthPoints()
 
 bool ADefenseTower::IsDestroyed()
 {
-	return (_HealthPoints > 0.0f);
+	return (_HealthPoints <= 0.0f);
 }
 
 bool ADefenseTower::CanFire()
@@ -86,7 +86,10 @@ void ADefenseTower::OnHealthPointsChanged()
 	{
 		float normalizedHealth = FMath::Clamp((float)_HealthPoints / HealthPoints, 0.0f, 1.0f);
 		auto healthBar = Cast<UHealthBarWidget>(HealthBarWidget);
-		healthBar->HealthProgressBar->SetPercent(normalizedHealth);
+		if (healthBar != nullptr)
+		{
+			healthBar->SetHealthPercent(normalizedHealth);
+		}
 	}
 
 	if (IsKilled())
@@ -124,7 +127,7 @@ void ADefenseTower::Hit(int damage)
 
 bool ADefenseTower::IsKilled()
 {
-	return (HealthPoints <= 0.0f);
+	return (_HealthPoints <= 0.0f);
 }
 
 void ADefenseTower::OnBeginOverlap(UPrimitiveComponent* OverlappedComponent,

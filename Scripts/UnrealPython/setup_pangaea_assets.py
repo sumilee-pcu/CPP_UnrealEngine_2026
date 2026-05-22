@@ -21,6 +21,12 @@ def import_file(source_file, destination_path, replace=False):
         return []
 
     ensure_dir(destination_path)
+    asset_name = os.path.splitext(os.path.basename(source_file))[0]
+    asset_path = destination_path + "/" + asset_name
+    if not replace and unreal.EditorAssetLibrary.does_asset_exist(asset_path):
+        log("Asset already exists: " + asset_path)
+        return [asset_path]
+
     task = unreal.AssetImportTask()
     task.filename = source_file
     task.destination_path = destination_path

@@ -12,6 +12,12 @@ class PANGAEA_API UHealthBarWidget : public UUserWidget
 
 
 public:
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidget))
+	UFUNCTION(BlueprintCallable)
+	void SetHealthPercent(float Percent);
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, meta = (BindWidgetOptional))
 		UProgressBar* HealthProgressBar;
+
+protected:
+	virtual void NativeConstruct() override;
 };

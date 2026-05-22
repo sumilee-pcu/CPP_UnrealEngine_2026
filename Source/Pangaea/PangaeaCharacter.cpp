@@ -34,7 +34,10 @@ void APangaeaCharacter::OnHealthPointsChanged()
     {
         float normalizedHealth = FMath::Clamp((float)_HealthPoints / HealthPoints, 0.0f, 1.0f);
         auto healthBar = Cast<UHealthBarWidget>(HealthBarWidget);
-        healthBar->HealthProgressBar->SetPercent(normalizedHealth);
+        if (healthBar != nullptr)
+        {
+            healthBar->SetHealthPercent(normalizedHealth);
+        }
     }
 
     if (_AnimInstance != nullptr)
