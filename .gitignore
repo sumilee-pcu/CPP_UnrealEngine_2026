@@ -1,7 +1,9 @@
 Binaries/
 DerivedDataCache/
 Intermediate/
-Saved/
+Saved/*
+!Saved/UnrealBuildTool/
+!Saved/UnrealBuildTool/BuildConfiguration.xml
 .vs/
 *.sln
 *.VC.db
