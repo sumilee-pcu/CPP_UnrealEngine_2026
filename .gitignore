@@ -4,6 +4,10 @@ Intermediate/
 Saved/*
 !Saved/UnrealBuildTool/
 !Saved/UnrealBuildTool/BuildConfiguration.xml
+Content/Developers/
+Content/Collections/
+__pycache__/
+*.pyc
 .vs/
 *.sln
 *.VC.db
