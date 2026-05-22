@@ -1,19 +1,19 @@
-# Pangaea UE 5.7 Practice
+# Pangaea UE 5.7.4 Practice
 
-This is a UE 5.7.x practice project scaffold adapted from the Chapter 12 source code in `Unreal-Engine-5-Game-Development-with-C-Scripting`.
+This is a UE 5.7.4 practice project scaffold adapted from the Chapter 12 source code in `Unreal-Engine-5-Game-Development-with-C-Scripting`.
 
 ## Version Target
 
-- Unreal Engine: 5.7.x
+- Unreal Engine: 5.7.4
 - Visual Studio: 2022
 - Project path: use ASCII-only paths, for example `F:\gameEngineering\Pangaea573`
 
 ## Notes
 
 - The module name remains `Pangaea` so existing `PANGAEA_API` code does not need to be renamed.
-- `Target.cs` uses UE 5.7 build settings: `BuildSettingsVersion.V6`, `Unreal5_7` include order, and C++20.
+- `Target.cs` uses UE 5.7.4-compatible build settings: `BuildSettingsVersion.V6`, `Unreal5_7` include order, and C++20.
 - `Build.cs` includes `UMG`, `Slate`, and `SlateCore` because the final chapter uses `UUserWidget` and `UProgressBar`.
-- `UPawnSensingComponent` is deprecated in UE 5.7.x. It can be kept for the class exercise, but AI Perception is the modern replacement.
+- `UPawnSensingComponent` is deprecated in UE 5.7.4. It can be kept for the class exercise, but AI Perception is the modern replacement.
 
 ## Next Steps After UE Update
 

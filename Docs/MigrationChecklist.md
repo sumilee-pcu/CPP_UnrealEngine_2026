@@ -1,4 +1,4 @@
-# UE 5.7.x Migration Checklist
+# UE 5.7.4 Migration Checklist
 
 - Keep project under an ASCII-only path.
 - Regenerate project files after the UE update finishes.
